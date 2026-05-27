@@ -6,12 +6,12 @@ Build order for arc-conf. Each step has a corresponding `docs/stepN-*.md` walkth
 
 - [x] **Step 1**: Initialize Next.js project — [walkthrough](./step1-init-nextjs.md)
 - [x] **Step 2**: Install and initialize shadcn/ui — [walkthrough](./step2-shadcn-ui.md)
-- [ ] **Step 3**: Add core dependencies — [walkthrough](./step3-core-deps.md)
+- [x] **Step 3**: Add core dependencies — [walkthrough](./step3-core-deps.md)
   - `date-fns-tz` — time zone conversion (AoE / Munich / local)
   - `js-yaml` — read upstream YAML data
   - `zod` — runtime schema validation
   - `next-themes` — dark mode
-- [ ] **Step 4**: Configure static export + project structure
+- [ ] **Step 4**: Configure static export + project structure — [walkthrough](./step4-static-export.md)
 
 ## Phase 2: Data Layer
 
