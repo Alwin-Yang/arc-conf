@@ -153,13 +153,13 @@ The empty `"config": ""` is correct for Tailwind v4 (no `tailwind.config.ts` fil
 
 ## 4. Add a test component
 
-Add a `Button` to confirm the pipeline works end-to-end:
+The **Nova** preset's `init` step already created `components/ui/button.tsx` for us (you'll see `✔ Created 2 files: components/ui/button.tsx, lib/utils.ts` in the CLI output). No need to run `shadcn add button` separately — skip straight to the smoke test below.
 
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-This creates `components/ui/button.tsx`. Wire it into the landing page so you can see it:
+> For any component **not** seeded by the preset (e.g. `card`, `dialog`, `select`), the syntax is:
+>
+> ```bash
+> pnpm dlx shadcn@latest add card
+> ```
 
 Edit `app/page.tsx` and replace its contents with a minimal smoke test:
 
@@ -214,8 +214,12 @@ Should exit with no errors. If you see `Cannot find module '@/components/ui/butt
 ## 6. Commit the baseline
 
 ```bash
-git add components.json lib/ components/ app/globals.css app/page.tsx package.json pnpm-lock.yaml
-git commit -m "step 2: init shadcn/ui (new-york, neutral) + button smoke test"
+git add components.json lib/ components/ app/globals.css app/page.tsx \
+        package.json pnpm-lock.yaml pnpm-workspace.yaml
+git commit -m "step 2: init shadcn/ui (radix + nova preset) + button smoke test"
+
+git add docs/ROADMAP.md docs/step2-shadcn-ui.md
+git commit -m "docs: add step2 walkthrough, mark step1 done"
 ```
 
 ---
