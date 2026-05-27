@@ -4,8 +4,8 @@ Build order for arc-conf. Each step has a corresponding `docs/stepN-*.md` walkth
 
 ## Phase 1: Foundation
 
-- [ ] **Step 1**: Initialize Next.js project — [walkthrough](./step1-init-nextjs.md)
-- [ ] **Step 2**: Install and initialize shadcn/ui
+- [x] **Step 1**: Initialize Next.js project — [walkthrough](./step1-init-nextjs.md)
+- [ ] **Step 2**: Install and initialize shadcn/ui — [walkthrough](./step2-shadcn-ui.md)
 - [ ] **Step 3**: Add core dependencies
   - `date-fns-tz` — time zone conversion (AoE / Munich / local)
   - `js-yaml` — read upstream YAML data
