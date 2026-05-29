@@ -8,10 +8,35 @@
 # Valid areas: ai, robotics, control. An empty list is invalid (a venue must
 # have at least one area, or it would be dropped).
 #
-# Example: ai-deadlines tags AAAI with a `RO` sub, so it leaks into robotics.
-# Uncomment the line below to pin AAAI to ai only.
+# -----------------------------------------------------------------------------
+# CLASSIFICATION PRINCIPLE: tag the venue's CENTER OF GRAVITY, not every track
+# it happens to accept.
 #
+# A venue's area is its *community / home turf*, NOT the union of every topic
+# its CFP will take. Almost every flagship has cross-cutting tracks (AAAI/ICML
+# accept robotics papers; AAMAS touches control), so "tag what it accepts" would
+# collapse everything into [ai, robotics, control] and the area filter would
+# carry no signal. A roboticist looking for "robotics" wants ICRA/IROS/CoRL —
+# not AAAI, even though AAAI has a robotics track.
+#
+# Rule of thumb: add an area only if that community would treat the venue as a
+# *home venue to submit to*, not merely "a place that has a track for us".
+#   - ICRA / IROS / RSS / CoRL  -> robotics        (robot-first)
+#   - CDC / ACC / ECC           -> control         (control-first)
+#   - AAAI / ICML / ICLR / AAMAS-> ai              (general AI; RO/control track ≠ home)
+#   - L4DC                      -> [control, ai]   (genuine learning-for-control bridge)
+#   - RA-L                      -> [robotics, control]  (Robotics *and* Automation)
+#
+# Fine-grained "this AI venue also has a robotics track" info is NOT lost: it
+# lives in each record's `tags` (raw upstream sub codes), so a future
+# track-level filter can still surface it without polluting `areas`.
+# -----------------------------------------------------------------------------
+
+# General-AI venues that ai-deadlines tags with a `RO` (robotics) sub, leaking
+# them into robotics. Pin them to their true home so the filter stays meaningful.
 AAAI: [ai]
+ICLR: [ai]
+AAMAS: [ai, robotics]
 
 # ICRA: [robotics]
 # IROS: [robotics]

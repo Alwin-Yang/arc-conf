@@ -31,23 +31,22 @@ Build order for arc-conf. Each step has a corresponding `docs/stepN-*.md` walkth
 - [ ] **Step 8**: Conference detail page
   - All deadlines (abstract / paper / supplementary / rebuttal / camera-ready)
   - RA-L ↔ ICRA / IROS cycle linkage
-- [ ] **Step 9**: Personal status tracker (localStorage)
-  - In Progress / Submitted / Under Review / Rebuttal / Accepted / Rejected
-- [ ] **Step 10**: Time zone toggle (AoE / Munich / local)
+- [ ] **Step 9**: Time zone toggle (AoE / Munich / local)
 
 ## Phase 4: Export & Automation
 
-- [ ] **Step 11**: `.ics` calendar export per conference + bulk
-- [ ] **Step 12**: Sitemap + Open Graph metadata
-- [ ] **Step 13**: GitHub Actions for daily auto-rebuild
+- [ ] **Step 10**: `.ics` calendar export per conference + bulk
+- [ ] **Step 11**: Sitemap + Open Graph metadata
+- [ ] **Step 12**: GitHub Actions for daily auto-rebuild
 
 ## Phase 5: Deploy
 
-- [ ] **Step 14**: Deploy to Cloudflare Pages (or GitHub Pages)
-- [ ] **Step 15**: Custom domain + HTTPS (optional)
+- [ ] **Step 13**: Deploy to Cloudflare Pages (or GitHub Pages)
+- [ ] **Step 14**: Custom domain + HTTPS (optional)
 
 ## Future Ideas (post-v1)
 
+- Personal status tracker (localStorage: In Progress / Submitted / Under Review / Rebuttal / Accepted / Rejected)
 - Workshop / Special Issue tracker (TRO SI, RA-L SI)
 - Browser extension for one-click deadline import
 - Email notifications (would require backend — only if demand exists)

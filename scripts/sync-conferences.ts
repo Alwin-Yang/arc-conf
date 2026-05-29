@@ -64,7 +64,7 @@ const TITLE_AREA: Record<string, Area[]> = {
   ACC: ["control"],
   ECC: ["control"],
   IFAC: ["control"],
-  L4DC: ["control", "ai", "robotics"],
+  L4DC: ["control", "ai"],
 };
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
