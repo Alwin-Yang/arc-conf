@@ -1,0 +1,63 @@
+# arc-conf — hand-curated conferences & overrides
+# -------------------------------------------------
+# These entries are MERGED on top of the upstream paperswithcode/ai-deadlines
+# feed by scripts/sync-conferences.ts. Use this file for:
+#   - venues upstream doesn't track (RA-L, control-theory conferences, ...)
+#   - fixing/extending an upstream entry (match its `id`, e.g. "icra-2026")
+#
+# An entry here REPLACES the upstream entry with the same `id`; if the `id` is
+# new, it's simply added. Each entry is normalized through the same pipeline as
+# upstream data, so it must satisfy the same schema once processed.
+#
+# Deadline `time` is the as-published wall-clock string; `timezone` falls back
+# to the entry-level `timezone` when omitted. Dates here are HAND-CURATED —
+# always verify against the official call-for-papers before relying on them.
+
+# RA-L is the headline override: it has no fixed conference deadline, but papers
+# can opt in to be presented at ICRA or IROS, which defines the cycle dates.
+- id: ral-2026
+  title: RA-L
+  year: 2026
+  full_name: IEEE Robotics and Automation Letters
+  link: https://www.ieee-ras.org/publications/ra-l
+  areas: [robotics, control]
+  rank: Q1
+  timezone: UTC-12
+  note: >-
+    Rolling monthly submission. The deadlines below are the cut-offs to opt in
+    for ICRA / IROS 2026 presentation. Verify on the official RA-L page.
+  deadlines:
+    - type: paper
+      time: "2025-09-01 23:59:59"
+      label: ICRA 2026 presentation option
+    - type: paper
+      time: "2026-03-01 23:59:59"
+      label: IROS 2026 presentation option
+
+# Learning for Dynamics & Control — the bridge venue between ML and control.
+- id: l4dc-2026
+  title: L4DC
+  year: 2026
+  full_name: Learning for Dynamics & Control Conference
+  link: https://l4dc.web.ox.ac.uk/
+  areas: [control, ai, robotics]
+  timezone: UTC-12
+  note: Hand-curated placeholder dates — confirm with the official CFP.
+  deadlines:
+    - type: abstract
+      time: "2025-11-12 23:59:59"
+    - type: paper
+      time: "2025-11-19 23:59:59"
+
+# IEEE Conference on Decision and Control — the flagship control-theory venue.
+- id: cdc-2026
+  title: CDC
+  year: 2026
+  full_name: IEEE Conference on Decision and Control
+  link: https://cdc2026.ieeecss.org/
+  areas: [control]
+  timezone: UTC-12
+  note: Hand-curated placeholder dates — confirm with the official CFP.
+  deadlines:
+    - type: paper
+      time: "2026-03-17 23:59:59"

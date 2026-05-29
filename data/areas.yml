@@ -1,0 +1,18 @@
+# Hand-curated area classification, keyed by conference TITLE (case-insensitive).
+#
+# When a title appears here, these areas REPLACE whatever ai-deadlines inferred
+# from its `sub` codes — for every year, and for both upstream feeds
+# (ai-deadlines and ccf-deadlines). This is the highest-priority area signal
+# short of a full per-conference entry in data/conferences.yml.
+#
+# Valid areas: ai, robotics, control. An empty list is invalid (a venue must
+# have at least one area, or it would be dropped).
+#
+# Example: ai-deadlines tags AAAI with a `RO` sub, so it leaks into robotics.
+# Uncomment the line below to pin AAAI to ai only.
+#
+AAAI: [ai]
+
+# ICRA: [robotics]
+# IROS: [robotics]
+# CVPR: [ai]
