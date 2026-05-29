@@ -11,20 +11,20 @@ Build order for arc-conf. Each step has a corresponding `docs/stepN-*.md` walkth
   - `js-yaml` — read upstream YAML data
   - `zod` — runtime schema validation
   - `next-themes` — dark mode
-- [ ] **Step 4**: Configure static export + project structure — [walkthrough](./step4-static-export.md)
+- [x] **Step 4**: Configure static export + project structure — [walkthrough](./step4-static-export.md)
 
 ## Phase 2: Data Layer
 
-- [ ] **Step 5**: Define `Conference` schema (Zod)
-- [ ] **Step 6**: Build data sync script
-  - Pull `paperswithcode/ai-deadlines` YAML
-  - Filter to AI / Robotics / Control venues
-  - Merge with custom `data/conferences.yml` overrides (RA-L cycles, multi-deadline, etc.)
+- [x] **Step 5**: Define `Conference` schema (Zod) — [walkthrough](./step5-conference-schema.md)
+- [x] **Step 6**: Build dual-source data sync script — [walkthrough](./step6-data-sync.md)
+  - Pull `paperswithcode/ai-deadlines` YAML (area authority via `sub` codes)
+  - Enrich with `ccfddl/ccf-deadlines` (CCF/CORE rank, newer years, multi-round timelines)
+  - Merge with custom `data/conferences.yml` overrides (RA-L cycles, control venues, etc.)
   - Output `data/conferences.json` at build time
 
 ## Phase 3: UI
 
-- [ ] **Step 7**: Deadline list page
+- [x] **Step 7**: Deadline list page — [walkthrough](./step7-deadline-list.md)
   - Cards with countdown
   - Filters (area / rank / month)
   - URL-synced filter state
